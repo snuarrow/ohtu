@@ -20,6 +20,8 @@ public class Main {
                 (Viitegeneraattori) ctx.getBean("viitegeneraattoriIO"),
                 (Varasto) ctx.getBean("varastoIO")
         );
+        
+        // annotaatiokommentti
 
         // kauppa hoitaa yhden asiakkaan kerrallaan seuraavaan tapaan:
         kauppa.aloitaAsiointi();
