@@ -16,9 +16,9 @@ public class Main {
         
         Kauppa kauppa = new Kauppa
         (
-                (Pankki) ctx.getBean("pankkiIO"),
-                (Viitegeneraattori) ctx.getBean("viitegeneraattoriIO"),
-                (Varasto) ctx.getBean("varastoIO")
+                (Pankki) ctx.getBean("pankki"),
+                (Viitegeneraattori) ctx.getBean("viitegeneraattori"),
+                (Varasto) ctx.getBean("varasto")
         );
         
         // annotaatiokommentti
@@ -40,7 +40,7 @@ public class Main {
         kauppa.tilimaksu("Arto Vihavainen", "3425-1652");
 
         // kirjanpito
-        for (String tapahtuma : ((Kirjanpito) ctx.getBean("kirjanpitoIO")).getTapahtumat()) {
+        for (String tapahtuma : ((Kirjanpito) ctx.getBean("kirjanpito")).getTapahtumat()) {
             System.out.println(tapahtuma);
         }
     }
